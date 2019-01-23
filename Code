@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        String[] Namen = {"Sasuke", "Naruto", "Madara", "Choji", "Nara", "Goku", "Vegeta", "Chichi"};
+
+        for (int i = 0; i < Namen.length; i++) {
+            System.out.println(i+ ". " + Namen[i]);
+        }
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Welke character name wil je veranderen?");
+
+        int positie = sc.nextInt();
+
+        if(positie <= Namen.length){
+            System.out.println("Voer een nieuwe character in");
+        }
+        else{
+            System.out.println("Dit is geen getal of getal is te hoog");
+            System.exit(0);
+        }
+
+        String character = sc.next();
+
+        Namen[positie] = character;
+
+        for (int i = 0; i <Namen.length ; i++) {
+            System.out.println(i + " " + Namen[i]);
+
+        }
+        System.out.println("De character is veranderd.");
+        System.exit(0);
+    }
+}
